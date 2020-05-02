@@ -8,6 +8,6 @@ An overview of our model is shown below:
 
 <img align="middle" src="figures/detailed_architecture.png" alt="overview" width="420"/>
 
-An example of anomaly detection on a time series of office temperature, which is provided by NAB datasets in their known anomaly subgroup ([link])(https://github.com/numenta/NAB/tree/master/data/realKnownCause):
+An example of anomaly detection on a time series of office temperature, which is provided by NAB datasets in their known anomaly subgroup [link](https://github.com/numenta/NAB/tree/master/data/realKnownCause):
 
 <img align="middle" src="figures/ambient_temp_ours.png" alt="result" width="1000"/>
