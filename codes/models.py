@@ -327,7 +327,10 @@ class VAEmodel(BaseModel):
                             dtype=tf.float32, trainable=True)
       else:
         sigma = tf.cast(self.config['sigma'], tf.float32)
-      self.sigma2 = tf.square(sigma) + self.sigma2_offset
+      self.sigma2 = tf.square(sigma)
+      if self.config['TRAIN_sigma'] == 1:
+        self.sigma2 = self.sigma2 + self.sigma2_offset
+
     print("sigma2: \n{}\n".format(self.sigma2))
 
 

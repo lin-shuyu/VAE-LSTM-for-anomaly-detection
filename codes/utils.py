@@ -52,7 +52,7 @@ def process_config(json_file):
                                                       config['l_win'],
                                                       config['l_seq'],
                                                       config['code_size'],
-                                                      config['TRAIN_sigma'])
+                                                      config['sigma'])
   config['summary_dir'] = os.path.join(save_dir, save_name, "summary/")
   config['result_dir'] = os.path.join(save_dir, save_name, "result/")
   config['checkpoint_dir'] = os.path.join(save_dir, save_name, "checkpoint/")
