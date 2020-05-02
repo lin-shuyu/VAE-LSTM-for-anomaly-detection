@@ -25,7 +25,7 @@ We pre-processed the NAB data, which consists of 5 sequences, by creating a trai
 
 ## Training
 Our VAE-LSTM model is defined in several files, including train.py, base.py, utils.py, data_loader.py, models.py, trainers.py. To train our model, simply run 
-'python3 train.py --config NAB_config.json', 
+`python3 train.py --config NAB_config.json`, 
 where NAB_config.json defines all the hyper-parameters of our model and you can experiment by using different values. 
 
 ## Anomaly detection using the trained model
@@ -35,10 +35,10 @@ Hope you enjoy playing with our code and find it helpful for your projects! Happ
 
 If you find our codes/project relevant to your work, please cite us in your work:
 
-'''
+```
 @INPROCEEDINGS{VAE-LSTM-AD, 
    author={S. {Lin} and R. {Clark} and R. {Birke} and S. {Schönborn} and N. {Trigoni} and S. {Roberts}}, 
    booktitle={ICASSP 2020 - 2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
    title={Anomaly Detection for Time Series Using VAE-LSTM Hybrid Model}, 
    year={2020}} 
-'''
+```
