@@ -6,6 +6,5 @@ This Github repository hosts our code to train a VAE-LSTM hybrid model for anoma
 
 An overview of our model is shown below:
 
-<div style="text-align:center">
- <img src="figures/detailed_architecture.png" alt="overview" width="420"/>
-</div>
+<img align="center" src="figures/detailed_architecture.png" alt="overview" width="420"/>
+
