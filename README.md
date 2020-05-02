@@ -1,6 +1,6 @@
 # VAE-LSTM-for-anomaly-detection
 
-This Github repository hosts our code and pre-processed data to train a VAE-LSTM hybrid model for anomaly detection, as proposed in our paper Anomaly Detection for Time Series Using VAE-LSTM Hybrid Model at ICASSP 2020. 
+This Github repository hosts our code and pre-processed data to train a VAE-LSTM hybrid model for anomaly detection, as proposed in our paper [Anomaly Detection for Time Series Using VAE-LSTM Hybrid Model](https://ieeexplore.ieee.org/document/9053558) at ICASSP 2020. 
 
 In short, our anomaly detection model contains:
   * a VAE unit which summarizes the local information of a short window into a low-dimensional embedding,
@@ -14,3 +14,31 @@ An example of anomaly detection on a time series of office temperature, which is
 
 <img align="middle" src="figures/ambient_temp_ours.png" alt="result" width="800"/>
 
+To run our code, please follow the instructions shown below. 
+
+## Environment
+Our code is written in Python3 with tensorflow 1.4 library.
+Please install the python libraries listed in the requirements.txt. We suggest to build a virtual environment using virtualenv package. Please installing and setting up virtualenv, please follwo the procedures [here](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/).
+
+## Data pre-processing
+We pre-processed the NAB data, which consists of 5 sequences, by creating a training set that does not contain any anomalies while keeping the rest of sequence as test set for evaluation. In addition, we remove the mean and standardize the time series. Pre-processed data are included in this repository for convenience of running our code. If you want to use the data for your own project, please cite and refer to the [NAB project](https://numenta.com/machine-intelligence-technology/numenta-anomaly-benchmark/) and access the raw data if needed. 
+
+## Training
+Our VAE-LSTM model is defined in several files, including train.py, base.py, utils.py, data_loader.py, models.py, trainers.py. To train our model, simply run 
+'python3 train.py --config NAB_config.json', 
+where NAB_config.json defines all the hyper-parameters of our model and you can experiment by using different values. 
+
+## Anomaly detection using the trained model
+After the model has been trained, we also prepare an iPython-notebook in NAB-anomaly-detection.ipynb for you to detect some anomalies detection on the test set. All you need to do is to run the code, make sure the NAB_config.json is prepared so that the right trained model will be loaded. The only thing that you need to specify in order to achieve reasonable anomaly detection result is to set a threshold on the anomaly detection metric. We suggest to observe the histogram of the anomaly detection metric and set the threshold accordingly.
+
+Hope you enjoy playing with our code and find it helpful for your projects! Happy anomaly detection! 
+
+If you find our codes/project relevant to your work, please cite us in your work:
+
+'''
+@INPROCEEDINGS{VAE-LSTM-AD, 
+   author={S. {Lin} and R. {Clark} and R. {Birke} and S. {Schönborn} and N. {Trigoni} and S. {Roberts}}, 
+   booktitle={ICASSP 2020 - 2020 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
+   title={Anomaly Detection for Time Series Using VAE-LSTM Hybrid Model}, 
+   year={2020}} 
+'''
