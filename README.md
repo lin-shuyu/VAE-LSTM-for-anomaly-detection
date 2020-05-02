@@ -1,6 +1,11 @@
-# VAE-LSTM-for-anomaly-detection
+# VAE-LSTM for anomaly detection (ICASSP'20)
 
-This Github repository hosts our code and pre-processed data to train a VAE-LSTM hybrid model for anomaly detection, as proposed in our paper [Anomaly Detection for Time Series Using VAE-LSTM Hybrid Model](https://ieeexplore.ieee.org/document/9053558) at ICASSP 2020. 
+This Github repository hosts our code and pre-processed data to train a VAE-LSTM hybrid model for anomaly detection, as proposed in our ICASSP 2020 paper: <br>
+[Anomaly Detection for Time Series Using VAE-LSTM Hybrid Model](https://ieeexplore.ieee.org/document/9053558). 
+<br>
+[Shuyu Lin<sup>1</sup>](https://shuyulin.co.uk/), [Ronald Clark<sup>2</sup>](www.ronnieclark.co.uk), [Robert Birke](https://scholar.google.com/citations?user=ggnT5tYAAAAJ&hl=en)<sup>3</sup>, Sandro Schönborn<sup>3</sup>, Niki Trigoni<sup>1</sup>, Stephen Roberts<sup>1</sup>
+<br>
+<sup>1</sup>University of Oxford, <sup>2</sup>Imperial College London, <sup>3</sup>ABB Corporate Research
 
 In short, our anomaly detection model contains:
   * a VAE unit which summarizes the local information of a short window into a low-dimensional embedding,
