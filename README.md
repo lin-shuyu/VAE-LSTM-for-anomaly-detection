@@ -16,6 +16,8 @@ An example of anomaly detection on a time series of office temperature, which is
 <img align="middle" src="figures/ambient_temp_ours.png" alt="result" width="800"/>
 
 
+
+
 To run our code, please follow the instructions shown below. 
 
 ## Environment
