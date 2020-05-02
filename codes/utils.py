@@ -31,11 +31,11 @@ def save_config(config):
 
 
 def process_config(json_file):
-  config, _ = get_config_from_json(json_file)
+  config = get_config_from_json(json_file)
 
   # create directories to save experiment results and trained models
   if config['load_dir'] == "default":
-    save_dir = "./experiments/local-results/{}/{}/batch-{}".format(
+    save_dir = "../experiments/local-results/{}/{}/batch-{}".format(
       config['exp_name'], config['dataset'], config['batch_size'])
   else:
     save_dir = config['load_dir']
@@ -45,15 +45,14 @@ def process_config(json_file):
                                                    config['dataset'],
                                                    config['l_win'],
                                                    config['l_seq'],
-                                                   config['l_seq'])
+                                                   config['code_size'])
   else:
     save_name = '{}-{}-{}-{}-{}-fixedSigma-{}'.format(config['exp_name'],
                                                       config['dataset'],
                                                       config['l_win'],
                                                       config['l_seq'],
-                                                      config['l_seq'],
-                                                      config['l_seq'])
-
+                                                      config['code_size'],
+                                                      config['TRAIN_sigma'])
   config['summary_dir'] = os.path.join(save_dir, save_name, "summary/")
   config['result_dir'] = os.path.join(save_dir, save_name, "result/")
   config['checkpoint_dir'] = os.path.join(save_dir, save_name, "checkpoint/")

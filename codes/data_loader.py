@@ -11,7 +11,7 @@ class DataGenerator(BaseDataGenerator):
     self.load_NAB_dataset(self.config['dataset'], self.config['y_scale'])
 
   def load_NAB_dataset(self, dataset, y_scale=6):
-    data_dir = './datasets/NAB-known-anomaly/'
+    data_dir = '../datasets/NAB-known-anomaly/'
     data = np.load(data_dir + dataset + '.npz')
 
     # normalise the dataset by training set mean and std

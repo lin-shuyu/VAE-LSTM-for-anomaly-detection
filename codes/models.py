@@ -421,6 +421,8 @@ class lstmKerasModel:
       for i in range(2):
         axs[i + j * 2].legend(('ground truth', 'reconstruction'))
       savefig(config['result_dir'] + "lstm_long_seq_recons_{}.pdf".format(idx_test))
+      fig.clf()
+      plt.close()
 
   def plot_lstm_embedding_prediction(self, idx_test, config, model_vae, sess, data, lstm_embedding_test):
     self.plot_reconstructed_lt_seq(idx_test, config, model_vae, sess, data, lstm_embedding_test)
@@ -439,3 +441,5 @@ class lstmKerasModel:
       if i == config['code_size'] - 1:
         axs[i].legend(('VAE\nembedding', 'LSTM\nembedding'))
     savefig(config['result_dir'] + "lstm_seq_embedding_{}.pdf".format(idx_test))
+    fig.clf()
+    plt.close()
