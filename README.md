@@ -5,4 +5,7 @@ This Github repository hosts our code to train a VAE-LSTM hybrid model for anoma
   * a LSTM model, which acts on the low- dimensional embeddings produced by the VAE model, to manage the sequential patterns over longer term.
 
 An overview of our model is shown below:
-<img src="figures/detailed_architecture.png" alt="overview" width="420"/>
+
+<div style="text-align:center">
+ <img src="figures/detailed_architecture.png" alt="overview" width="420"/>
+</div>
