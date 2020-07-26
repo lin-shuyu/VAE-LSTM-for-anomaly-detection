@@ -30,7 +30,9 @@ Our code is written in Python3 with tensorflow 1.4 library.
 Please install the python libraries listed in the requirements.txt. We suggest to build a virtual environment using virtualenv package. Please installing and setting up virtualenv, please follwo the procedures [here](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/).
 
 ## Data pre-processing
-We pre-processed the NAB data, which consists of 5 sequences, by creating a training set that does not contain any anomalies while keeping the rest of sequence as test set for evaluation. In addition, we remove the mean and standardize the time series. Pre-processed data are included in the `datasets/` subfolder with this repository for convenience of running our code. If you want to use the data for your own project, please cite and refer to the [NAB project](https://numenta.com/machine-intelligence-technology/numenta-anomaly-benchmark/) and access the raw data if needed. 
+We pre-processed the NAB data, which consists of 5 sequences, by creating a training set that does not contain any anomalies while keeping the rest of sequence as test set for evaluation. In addition, we remove the mean and standardize the time series. Pre-processed data are included in the `datasets/` subfolder with this repository for convenience of running our code. A demo ipython notebook has also been provided in `datasets/` to show how the pre-processing is done. Explanation of the different features saved in the .npz files for the pre-processed datasets are given in the [discussion](https://github.com/lin-shuyu/VAE-LSTM-for-anomaly-detection/issues/3). 
+
+If you want to use the data for your own project, please cite and refer to the [NAB project](https://numenta.com/machine-intelligence-technology/numenta-anomaly-benchmark/) and access the raw data if needed. 
 
 ## Training
 Our VAE-LSTM model is defined in several files in the `codes/` subfolder, including train.py, base.py, utils.py, data_loader.py, models.py, trainers.py. To train our model, simply run 
