@@ -26,7 +26,7 @@ An example of anomaly detection on a time series of office temperature, which is
 To run our code, please follow the instructions shown below. 
 
 ## Environment
-Our code is written in Python3 with tensorflow 1.4 library.
+Our code is written in Python3 with tensorflow 1.5 library.
 Please install the python libraries listed in the requirements.txt. We suggest to build a virtual environment using virtualenv package. Please installing and setting up virtualenv, please follwo the procedures [here](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/).
 
 ## Data pre-processing
