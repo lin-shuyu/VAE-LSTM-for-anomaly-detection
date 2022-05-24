@@ -12,7 +12,7 @@ pandas == 0.25.3
 GPy == 1.9.9
 munch == 2.3.2
 opencv-contrib-python==4.1.0.25
-tensorflow-gpu == 1.15.2             # Version Matching. Must be version 0.6.1
+tensorflow-gpu == 2.6.4             # Version Matching. Must be version 0.6.1
 tensorflow_probability == 0.7.0            # Minimum version 0.8.0
 
 
