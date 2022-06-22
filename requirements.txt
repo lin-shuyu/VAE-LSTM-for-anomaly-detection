@@ -7,7 +7,7 @@ tqdm
 
 ###### Requirements with Version Specifiers ######
 #   See https://www.python.org/dev/peps/pep-0440/#version-specifiers
-numpy == 1.16.0
+numpy == 1.22.0
 pandas == 0.25.3
 GPy == 1.9.9
 munch == 2.3.2
